@@ -265,7 +265,7 @@ class Yolo_dataset(Dataset):
 
     def __getitem__(self, index):
         img_path = list(self.truth.keys())[index]
-        bboxes = np.array(self.truth.get(img_path), dtype=np.float)
+        bboxes = np.array(self.truth.get(img_path)).astype(float)
         img_path = os.path.join(self.cfg.dataset_dir, img_path)
         use_mixup = self.cfg.mixup
         if random.randint(0, 1):
