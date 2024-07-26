@@ -53,8 +53,8 @@ def train(hyp, opt, device, tb_writer=None):
         data_dict = yaml.load(f, Loader=yaml.FullLoader)  # model dict
     new_train_path = data_dict['train'].replace("..", " ")
     new_test_path = data_dict['test'].replace("..", " ")
-    train_path = 'Dogs-cats-rats-2/' + new_train_path
-    test_path = 'Dogs-cats-rats-2/' + new_test_path
+    train_path = 'Dogs-cats-rats-2' + new_train_path
+    test_path = 'Dogs-cats-rats-2' + new_test_path
     nc, names = (1, ['item']) if opt.single_cls else (int(data_dict['nc']), data_dict['names'])  # number classes, names
     assert len(names) == nc, '%g names found for nc=%g dataset in %s' % (len(names), nc, opt.data)  # check
 
