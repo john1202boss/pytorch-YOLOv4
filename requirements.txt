@@ -1,9 +1,0 @@
-numpy
-torch
-scikit_image
-matplotlib
-tqdm
-easydict
-Pillow
-tensorboardX
-
